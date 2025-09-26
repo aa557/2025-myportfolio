@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <link rel="icon" href="IMG_6190.jpg">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <h1><a href="#">AIKA KAMATA</a></h1>
+                <p class="brand-sub">Designer / Creator</p>
+            </div>
+
+            <nav class="nav" aria-label="サイト内リンク">
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                    <span class="sr-only">メニューを開く</span>
+                </button>
+
+                <ul class="nav-list" id="navList">
+                    <li><a href="#me-photo">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="me-photo">
+            <div class="about">
+                <h2>AIKA KAMATA</h2>
+                <ul>
+                    <li> « 提供サービス »</li>
+                    <li>ホームページ制作（レスポンシブ対応）</li>
+                </ul>
+            </div>
+            <div class="fade-in">
+                <img src="picnic.png" alt="宣材写真">
+            </div>
+        </section>
+
+
+        <section id="works">
+            <h1>Works</h1>
+            <div class="grid">
+                <a href="https://aa557.github.io/furniture.introduction/#" class="card">
+                    <article data-category="web">
+                        <div>
+                            <img src="https://aa557.github.io/furniture.introduction/int-1.avif" alt="家具の紹介webサイト">
+                        </div>
+                        <div class="card-body">
+                            <h4>家具の紹介webサイト</h4>
+                            <p>レスポンシブ対応のwebサイトデザイン</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+        <div class="grid">
+            <a href="https://aa557.github.io/Fictional-concert-announcement-site/" class="card">
+                <article data-category="web">
+                    <div>
+                        <img src="Thumbnail of the concert announcement site.png" alt="コンサート告知サイトのサムネイル">
+                    </div>
+                    <div class="card-body">
+                        <h4>架空のコンサート告知サイト</h4>
+                        <p>レスポンシブ対応の告知サイトデザイン</p>
+                    </div>
+                </article>
+            </a>
+        </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <form action="send.php" method="post">
+                <dl>
+                    <dt><label for="name">NAME</label></dt>
+                    <dd><input type="text" id="name" name="name" required placeholder="お名前を入力してください(必須)"></dd>
+
+                    <dt><label for="email">E-mail</label></dt>
+                    <dd><input type="email" id="email" name="email" required placeholder="メールアドレスを入力してください(必須)"></dd>
+
+                    <dt><label for="message">MESSAGE</label></dt>
+                    <dd><textarea id="message" name="message" required placeholder="お問い合わせ内容を入力してください(必須)"></textarea>
+                    </dd>
+                </dl>
+                <div class="button">
+                    <input type="submit" value="送信">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <small>© 2025 My ポートフォリオ</small>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

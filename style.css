@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ------------------- */
+/* header */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+/* アクセシビリティ用 */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 40;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+}
+
+.brand a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.brand-sub {
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+/* ナビ */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 8px;
+    cursor: pointer
+}
+
+.nav-toggle .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #111;
+    margin: 4px 0;
+    border-radius: 2px
+}
+
+/* main */
+/* 宣材写真 */
+#me-photo {
+    /* overflow: hidden; */
+    /* 要素の中身がはみ出したときに隠す */
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    /* 文字と写真の間 */
+}
+
+#me-photo h2 {
+    text-align: left;
+    font-size: 36px;
+    margin: 30px 0;
+}
+
+#me-photo img {
+    width: 300px;
+    height: 190px;
+    object-fit: cover;
+    /* 縦横比を保って枠いっぱいに表示 */
+    border-radius: 10px;
+}
+
+#me-photo ul {
+    display: block;
+    /* inline-blockを解除して自然な左揃え */
+    padding-left: 0;
+    /* リストの余白をリセット */
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease forwards;
+}
+
+
+/* works */
+#works {
+    padding: 48px 200px;
+}
+
+.card {
+    display: block;
+    /* aタグをブロックにしてカード化 */
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    /* 下線消す */
+    color: inherit;
+    /* 文字色を親に合わせる */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06)
+}
+
+.card-body {
+    padding: 16px
+}
+
+.card-body h4 {
+    margin: 0 0 8px;
+    font-size: 16px
+}
+
+.card-body p {
+    margin: 0 0 12px;
+    color: var(--muted)
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600
+}
+
+/* Contact */
+#contact {
+    padding: 48px 200px;
+}
+
+#contact dl {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#contact dt {
+    margin: 25px 0 5px;
+}
+
+#contact dd input,
+#contact dd textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: solid 1px #c8c8c8;
+    padding: 10px;
+
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .button {
+    text-align: center;
+}
+
+#contact .button input {
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: solid 1px #24292e;
+    cursor: pointer;
+}
+
+#contact .button input:hover {
+    /* カーソルに近づけると色が逆転する */
+    background: #fff;
+    color: #24292e;
+}
+
+
+
+
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: #24292e;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 150px;
+
+}
+
+footer small {
+    color: white;
+}
