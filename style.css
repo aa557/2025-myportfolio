@@ -16,7 +16,7 @@ a {
 }
 
 section {
-    scroll-margin-top: 300px; /* ヘッダーの高さ分に調整 */
+    scroll-margin-top:150px; /* ヘッダーの高さ分に調整 */
   }
 
 /* ------------------- */
@@ -130,6 +130,7 @@ section {
     justify-content: center;
     gap: 60px;
     /* 文字と写真の間 */
+    padding: 48px 200px;
 }
 
 #me-photo h2 {

@@ -19,6 +19,10 @@
         /* 他要素より前面に */
     }
 
+    section {
+        scroll-margin-top:150px; /* ヘッダーの高さ分に調整 */
+      }
+
     /* ヘッダー分の余白を main に確保する */
     main {
         padding-top: 100px;
@@ -79,11 +83,9 @@
         /* 他要素より前面に */
     }
 
-    /* ヘッダー分の余白を main に確保する */
-    main {
-        padding-top: 100px;
-        /* ヘッダーの高さに合わせて調整 */
-    }
+    section {
+        scroll-margin-top:150px; /* ヘッダーの高さ分に調整 */
+      }
 
     /* main */
     /* 宣材写真 */
