@@ -123,10 +123,9 @@
     }
 
     .card {
-        /* max-width: 160px;  */
-        /* max-height: 120px;  */
         max-width: 100%;
         height: auto;
+        margin: 0;
     }
 
     .card img {
@@ -154,8 +153,7 @@
         margin-top: 20px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         overflow: visible;
-        /* 追加 */
-        padding: 10px 0;
+        /* padding: 10px 0; */
         /* 上下に余白を確保 */
     }
 
